@@ -10,11 +10,14 @@ app.use(express.json());
 const baseRouter = express.Router();
 
 baseRouter.get('/greeting', (req, res) => {
-    return res.send('');
+  
+    return res.send('YASHAS');
 });
 
 baseRouter.post('/add', (req, res) => {
-    res.json({ "": null });
+    const {a,b} = req.body
+    console.log(req.body)
+    res.json({ "added": null });
 });
 
 
